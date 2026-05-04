@@ -1,0 +1,260 @@
+/* Dashboard Styles */
+.dashboard {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+  font-size: 28px;
+  color: #00ff41;
+  margin: 0 0 8px 0;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, rgba(0, 30, 60, 0.8), rgba(0, 60, 120, 0.6));
+  border: 1px solid #00ff41;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.4);
+  border-color: #00cc33;
+}
+
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stat-card-title {
+  font-size: 14px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-card-icon {
+  font-size: 20px;
+}
+
+.stat-card-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #00ff41;
+  margin-bottom: 10px;
+}
+
+.stat-card-subtitle {
+  font-size: 12px;
+  color: #888;
+}
+
+.chart-container {
+  background: linear-gradient(135deg, rgba(0, 30, 60, 0.8), rgba(0, 60, 120, 0.6));
+  border: 1px solid #00ff41;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  margin-bottom: 30px;
+}
+
+.chart-title {
+  font-size: 16px;
+  color: #00ff41;
+  margin: 0 0 20px 0;
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px dashed #00ff41;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Grid System for Cards */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.mini-stat {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #00ff41;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.mini-stat-label {
+  display: block;
+  font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.mini-stat-value {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff41;
+}
+
+.mini-stat-change {
+  display: block;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.mini-stat-change.positive {
+  color: #00ff41;
+}
+
+.mini-stat-change.negative {
+  color: #ff0000;
+}
+
+/* Resources Display */
+.resources-section {
+  background: linear-gradient(135deg, rgba(0, 30, 60, 0.8), rgba(0, 60, 120, 0.6));
+  border: 1px solid #00ff41;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.resources-title {
+  font-size: 16px;
+  color: #00ff41;
+  margin: 0 0 15px 0;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.resource-item {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #ffff00;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.resource-name {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.resource-amount {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffff00;
+}
+
+.resource-capacity {
+  display: block;
+  font-size: 10px;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* Tech Levels */
+.techlevels-section {
+  background: linear-gradient(135deg, rgba(0, 30, 60, 0.8), rgba(0, 60, 120, 0.6));
+  border: 1px solid #00ff41;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.techlevels-title {
+  font-size: 16px;
+  color: #00ff41;
+  margin: 0 0 15px 0;
+}
+
+.tech-item {
+  margin-bottom: 15px;
+}
+
+.tech-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.tech-name {
+  color: #aaa;
+  font-weight: bold;
+}
+
+.tech-level {
+  color: #00ff41;
+  font-weight: bold;
+}
+
+.tech-bar {
+  width: 100%;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #00ff41;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tech-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff41, #00cc33);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .stat-card-value {
+    font-size: 24px;
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

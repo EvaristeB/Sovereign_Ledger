@@ -1,0 +1,355 @@
+/* Diplomacy Panel Styles */
+.diplomacy-panel {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.diplomacy-header {
+  margin-bottom: 30px;
+}
+
+.diplomacy-header h2 {
+  font-size: 28px;
+  color: #ff6600;
+  margin: 0 0 8px 0;
+  text-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+.diplomacy-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .diplomacy-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.relations-panel {
+  background: linear-gradient(135deg, rgba(100, 40, 0, 0.8), rgba(150, 80, 0, 0.6));
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.2);
+}
+
+.relations-panel h3 {
+  color: #ff6600;
+  margin-top: 0;
+}
+
+.relations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.relation-item {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #ff6600;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.relation-item:hover {
+  background: rgba(255, 102, 0, 0.1);
+}
+
+.relation-item.active {
+  background: rgba(255, 102, 0, 0.15);
+  box-shadow: inset 0 0 10px rgba(255, 102, 0, 0.2);
+}
+
+.relation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.empire-name {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.relation-badge {
+  padding: 4px 8px;
+  background: rgba(255, 102, 0, 0.3);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.relation-meter {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.meter-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff6600;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  width: 50%;
+  transition: width 0.3s ease;
+}
+
+.meter-value {
+  font-size: 11px;
+  color: #aaa;
+  white-space: nowrap;
+}
+
+.relation-detail {
+  background: linear-gradient(135deg, rgba(100, 40, 0, 0.8), rgba(150, 80, 0, 0.6));
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.2);
+}
+
+.relation-detail h3 {
+  color: #ff6600;
+  margin-top: 0;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 102, 0, 0.2);
+}
+
+.detail-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detail-section h4 {
+  color: #ffaa44;
+  margin: 0 0 10px 0;
+}
+
+.status-info {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 4px;
+  border-left: 2px solid #ff6600;
+}
+
+.status-info p {
+  margin: 8px 0;
+  color: #fff;
+}
+
+.status-info strong {
+  color: #ff6600;
+}
+
+.detail-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-section li {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid #ffff00;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ff6600;
+  background: rgba(255, 102, 0, 0.1);
+  color: #ff6600;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: rgba(255, 102, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.action-btn.alliance {
+  border-color: #00ff41;
+  color: #00ff41;
+  background: rgba(0, 255, 65, 0.1);
+}
+
+.action-btn.alliance:hover {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: #00ff41;
+}
+
+.action-btn.embargo {
+  border-color: #ff0000;
+  color: #ff0000;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.action-btn.embargo:hover {
+  background: rgba(255, 0, 0, 0.2);
+  border-color: #ff0000;
+}
+
+.action-btn.tribute {
+  border-color: #ffff00;
+  color: #ffff00;
+  background: rgba(255, 255, 0, 0.1);
+}
+
+.action-btn.tribute:hover {
+  background: rgba(255, 255, 0, 0.2);
+  border-color: #ffff00;
+}
+
+.proposals-panel {
+  background: linear-gradient(135deg, rgba(100, 40, 0, 0.8), rgba(150, 80, 0, 0.6));
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.2);
+  margin-top: 20px;
+}
+
+.proposals-panel h3 {
+  color: #ff6600;
+  margin-top: 0;
+}
+
+.proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proposal-item {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #ffff00;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.proposal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.proposal-type {
+  color: #00ff41;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.proposal-from {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.proposal-target {
+  color: #ffff00;
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.proposal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.proposal-buttons button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.proposal-buttons .accept {
+  background: linear-gradient(135deg, #00ff41, #00cc33);
+  color: #000;
+}
+
+.proposal-buttons .accept:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+.proposal-buttons .reject {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: #fff;
+}
+
+.proposal-buttons .reject:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.propose-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff6600, #ff8800);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.propose-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.form-group select {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff6600;
+  color: #fff;
+  border-radius: 4px;
+}

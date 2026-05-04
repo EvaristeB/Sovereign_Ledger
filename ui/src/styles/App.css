@@ -1,0 +1,215 @@
+/* Main App Styles */
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0e27, #1a1f3a);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+.app-header {
+  background: linear-gradient(90deg, rgba(0, 30, 60, 0.9), rgba(0, 60, 120, 0.8));
+  border-bottom: 2px solid #00ff41;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.app-title h1 {
+  font-size: 24px;
+  color: #00ff41;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.game-status {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.empire-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.empire-item {
+  font-size: 12px;
+}
+
+.empire-item strong {
+  color: #00ff41;
+}
+
+.app-nav {
+  display: flex;
+  gap: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+  overflow-x: auto;
+}
+
+.nav-tab {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  color: #aaa;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-tab:hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: #00ff41;
+  color: #00ff41;
+}
+
+.nav-tab.active {
+  background: linear-gradient(135deg, #00ff41, #00cc33);
+  color: #000;
+  border-color: #00ff41;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
+
+.app-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.content-panel {
+  flex: 1;
+  display: none;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #0a0e27, #1a1f3a);
+}
+
+.content-panel.active {
+  display: block;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc33;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0e27;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  font-family: 'Courier New', monospace;
+}
+
+input, select, textarea {
+  font-family: 'Courier New', monospace;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Glow Effects */
+.glow-success {
+  text-shadow: 0 0 10px #00ff41;
+  color: #00ff41;
+}
+
+.glow-warning {
+  text-shadow: 0 0 10px #ffff00;
+  color: #ffff00;
+}
+
+.glow-danger {
+  text-shadow: 0 0 10px #ff0000;
+  color: #ff0000;
+}
+
+.glow-info {
+  text-shadow: 0 0 10px #00ccff;
+  color: #00ccff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-title {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .empire-info {
+    gap: 15px;
+    font-size: 10px;
+  }
+
+  .nav-tab {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}

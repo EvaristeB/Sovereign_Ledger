@@ -4,6 +4,7 @@ import { MarketSystem } from './MarketSystem';
 export class EventSystem {
   private events: GameEvent[] = [];
   private eventHistory: GameEvent[] = [];
+  private eventIdCounter = 0;
 
   /**
    * Generate market crash event
@@ -11,16 +12,17 @@ export class EventSystem {
   public generateMarketCrash(
     resource: ResourceType,
     market: MarketSystem,
-    severity: 'minor' | 'moderate' | 'severe'
+    severity: 'minor' | 'moderate' | 'severe',
+    affectedEmpires: string[] = []
   ): GameEvent {
     const currentPrice = market.getMarketPrice(resource);
     const crashPercentage = severity === 'minor' ? 20 : severity === 'moderate' ? 50 : 80;
 
     const event: GameEvent = {
-      id: `crash_${Date.now()}`,
+      id: `crash_${this.eventIdCounter++}_${Date.now()}`,
       type: 'market_crash',
       timestamp: Date.now(),
-      affectedEmpires: [],
+      affectedEmpires,
       data: {
         resource,
         priceDropPercentage: crashPercentage,
